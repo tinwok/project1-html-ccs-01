@@ -1,0 +1,98 @@
+*{
+  box-sizing: border-box;
+}
+:root{
+  --primary-text-color: #171100;
+  --background-color: #fffcf4;
+  --white-color: var();
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: poppins, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+/* HEADER Section */
+header {
+  background-color: var(--background-color);
+}
+
+.header {
+  padding: 44px 0;
+}
+.header .main-content {
+  width: 1170px;
+  margin-left: auto;
+  margin-right: auto;
+  /* short hand margin: 0 auto */
+  max-width: calc(100% - 24px);
+  /* xem lai phan nay */
+}
+.header .body {
+  display: flex;
+  align-items: center; 
+  /* can giua theo truc doc */
+}
+.header nav a {
+  font-size: 16px;
+  line-height: 28px;
+  color: #5f5b53;
+  padding: 0 21px;
+}
+.header nav a.active {
+  font-weight: 700;
+  color: var(--primary-text-color);
+  position: relative;
+}
+
+.header nav a.active::after {
+  content: "";
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--primary-text-color);
+  display: block;
+  position: absolute;
+  top: 23px;
+  left: 21px;
+}
+/* re chuot */
+.header nav a:hover{
+  text-shadow: 1px 0 0 currentColor;
+}
+.header nav {
+  display: flex;
+  margin: 0 auto;
+}
+.header .body .btn-sign-up{
+  width: 144px;
+  line-height: 50px;
+  color: var(--white-color);
+  background-color: var(--primary-text-color);
+  border-radius: 24.5px;
+  text-align: center;
+  margin-left: 49px;
+}
+
+.nav-body {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 36px 10%;
+  
+  /* z-index: 100; */
+}
+
+.content-header {
+  font-size: 58px;
+}
