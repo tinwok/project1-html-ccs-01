@@ -108,6 +108,7 @@ li {
 }
 .hero .main-content {
   display: flex;
+  padding-bottom: 110px;
 }
 
 .hero .left-box {
@@ -306,11 +307,11 @@ li {
   line-height: 30px;
   color: var(--primary-text-color);
 }
-.courses-products .card-body .title > div{
+.courses-products .card-body .title > div {
   display: flex;
 }
 .courses-products .card-body .star {
-  color: #FEA31B;
+  color: #fea31b;
   font-size: 1.6rem;
   line-height: 26px;
   font-weight: 300;
@@ -318,26 +319,26 @@ li {
   margin-top: 4px;
 }
 
-.courses-products .card-body .decs{
+.courses-products .card-body .decs {
   font-size: 1.4rem;
   line-height: 26px;
   margin-top: 6px;
   margin-bottom: 12px;
 }
 
-.courses-products .card-body .price{
+.courses-products .card-body .price {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.courses-products .price span{
+.courses-products .price span {
   font-weight: 600;
   line-height: 30px;
   font-size: 1.8rem;
   color: var(--primary-text-color);
 }
 
-.courses-products .price .book-btn{
+.courses-products .price .book-btn.active {
   background-color: var(--btn-color);
 }
