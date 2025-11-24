@@ -1,18 +1,23 @@
-*{
+* {
   box-sizing: border-box;
 }
-:root{
+:root {
   --primary-text-color: #171100;
   --background-color: #fffcf4;
-  --white-color: var();
+  --white-color: #fff;
+  --second-text-color: #5f5b53;
+  --font-body: Sen, serif;
+  --btn-color: #ffb900;
 }
+/* Doi don vi px sang rem */
 html {
   font-size: 62.5%;
 }
 
 body {
+  /* 1.6rem = 16px */
   font-size: 1.6rem;
-  font-family: poppins, sans-serif;
+  font-family: Poppins, sans-serif;
 }
 a {
   text-decoration: none;
@@ -22,14 +27,12 @@ li {
   list-style: none;
 }
 /* HEADER Section */
-header {
-  background-color: var(--background-color);
-}
-
 .header {
+  background-color: var(--background-color);
   padding: 44px 0;
 }
-.header .main-content {
+
+.main-content {
   width: 1170px;
   margin-left: auto;
   margin-right: auto;
@@ -37,19 +40,48 @@ header {
   max-width: calc(100% - 24px);
   /* xem lai phan nay */
 }
+.main-content .decs {
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: var(--second-text-color);
+  font-weight: 400;
+  margin-top: 28px;
+  margin-bottom: 38px;
+}
+.btn {
+  width: 144px;
+  line-height: 50px;
+  color: var(--white-color);
+  background-color: var(--primary-text-color);
+  border-radius: 24.5px;
+  text-align: center;
+}
 .header .body {
   display: flex;
-  align-items: center; 
+  align-items: center;
+
   /* can giua theo truc doc */
 }
+
+.header nav {
+  display: flex;
+  margin-left: auto;
+}
 .header nav a {
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 28px;
   color: #5f5b53;
   padding: 0 21px;
 }
+
+/* re chuot */
+.header nav a:hover {
+  color: var(--primary-text-color);
+  text-shadow: 1px 0 0 currentColor;
+}
+
 .header nav a.active {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-text-color);
   position: relative;
 }
@@ -63,36 +95,249 @@ header {
   display: block;
   position: absolute;
   top: 23px;
-  left: 21px;
+  left: 22px;
 }
-/* re chuot */
-.header nav a:hover{
-  text-shadow: 1px 0 0 currentColor;
-}
-.header nav {
-  display: flex;
-  margin: 0 auto;
-}
-.header .body .btn-sign-up{
-  width: 144px;
-  line-height: 50px;
-  color: var(--white-color);
-  background-color: var(--primary-text-color);
-  border-radius: 24.5px;
-  text-align: center;
+
+.header .body .btn-sign-up {
   margin-left: 49px;
 }
 
-.nav-body {
+/* Hero section */
+.hero {
+  background-color: var(--background-color);
+}
+.hero .main-content {
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 36px 10%;
-  
-  /* z-index: 100; */
 }
 
-.content-header {
-  font-size: 58px;
+.hero .left-box {
+  width: 48.7%;
+  position: relative;
+}
+
+.hero .left-box > img {
+  width: 470px;
+  height: 685px;
+  border-radius: 20px;
+}
+
+.hero .left-box .summary {
+  background-color: var(--white-color);
+  border-radius: 12px;
+  width: 240px;
+  height: 244px;
+  padding: 24px;
+  position: absolute;
+  bottom: 48px;
+  right: 0px;
+}
+
+.hero .left-box .item {
+  display: flex;
+  margin: 7px 0;
+  align-items: center;
+}
+
+.hero .left-box span {
+  display: block;
+}
+
+.hero .left-box .icon {
+  margin-right: 16px;
+  width: 48px;
+  height: 48px;
+}
+
+.hero .left-box .course-content span:first-child {
+  font-size: 1.4rem;
+  color: var(--second-text-color);
+  line-height: 26px;
+}
+.hero .left-box .course-content span:last-child {
+  color: var(--primary-text-color);
+  font-size: 1.8rem;
+  line-height: 30px;
+  font-weight: 600px;
+}
+.hero .left-box .summary .item:first-child {
+  margin-top: 0px;
+}
+.hero .left-box .summary .item:last-child {
+  margin-bottom: 0px;
+}
+.hero .right-box {
+  width: 51.3%;
+  padding-left: 116px;
+  padding-top: 101px;
+}
+
+.hero .right-box h1 {
+  font-family: var(--font-body);
+  font-weight: 700;
+  color: var(--primary-text-color);
+  font-size: 5.8rem;
+  line-height: 68px;
+  width: 488px;
+}
+/* 
+.hero .right-box .decs {
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: var(--second-text-color);
+  font-weight: 400;
+  margin-top: 28px;
+  margin-bottom: 38px;
+} */
+.hero .right-box .call-to-action {
+  display: flex;
+  margin-bottom: 48px;
+}
+.hero .right-box .btn-see-courses {
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  width: 180px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 32px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-right: 28px;
+}
+
+.hero .right-box .btn-watch-video {
+  display: flex;
+  background: none;
+  border: none;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.hero .right-box .btn-watch-video span {
+  margin-left: 14px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-top: -10px;
+}
+
+.hero .right-box .recent-engagement {
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: var(--second-text-color);
+}
+
+.hero .right-box .stats {
+  display: flex;
+  gap: 29px;
+}
+
+.hero .right-box .item strong {
+  font-size: 5.4rem;
+  font-weight: 600;
+  font-family: var(--font-body);
+  line-height: 54px;
+}
+/* Courses products */
+.courses-products {
+  margin-top: 153px;
+  margin-bottom: 200px;
+}
+
+.courses-products .product-header h1 {
+  line-height: 48px;
+  color: var(--primary-text-color);
+  font-size: 3.8rem;
+  font-family: var(--font-body);
+}
+
+.courses-products .call-to-action {
+  display: flex;
+  gap: 20px;
+}
+.courses-products .product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses-products .call-to-action .prev-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  font-size: 3.2rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  color: var(--btn-color);
+}
+
+.courses-products .call-to-action .next-btn {
+  width: 40px;
+  height: 40px;
+  background-color: var(--white-color);
+  border-radius: 50%;
+  font-size: 3.2rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid;
+  background-color: #ffb900;
+  color: #fff;
+}
+
+.courses-products .product-list {
+  display: flex;
+  gap: 30px;
+}
+.courses-products .product-card {
+  width: 370px;
+  height: 466px;
+}
+.courses-products .card-body {
+  padding: 16px 22px 22px 22px;
+}
+.courses-products .card-body .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.courses-products .card-body h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--primary-text-color);
+}
+.courses-products .card-body .title > div{
+  display: flex;
+}
+.courses-products .card-body .star {
+  color: #FEA31B;
+  font-size: 1.6rem;
+  line-height: 26px;
+  font-weight: 300;
+  margin-left: 5px;
+  margin-top: 4px;
+}
+
+.courses-products .card-body .decs{
+  font-size: 1.4rem;
+  line-height: 26px;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+.courses-products .card-body .price{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courses-products .price span{
+  font-weight: 600;
+  line-height: 30px;
+  font-size: 1.8rem;
+  color: var(--primary-text-color);
+}
+
+.courses-products .price .book-btn{
+  background-color: var(--btn-color);
 }
