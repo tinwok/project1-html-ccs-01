@@ -292,6 +292,8 @@ li {
 .courses-products .product-card {
   width: 370px;
   height: 466px;
+  border-radius: 12px;
+  border: 1px solid #e2dfda;
 }
 .courses-products .card-body {
   padding: 16px 22px 22px 22px;
@@ -341,4 +343,100 @@ li {
 
 .courses-products .price .book-btn.active {
   background-color: var(--btn-color);
+}
+
+/* About */
+.about {
+  background-color: #2e2100;
+  height: 380px;
+}
+.about .content {
+  padding-top: 96px;
+  display: flex;
+  justify-content: space-between;
+}
+.about .left-side {
+  align-items: center;
+  width: 159px;
+  height: 188px;
+}
+.about .left-side h3 {
+  line-height: 34px;
+  font-size: 2.4rem;
+  color: #f7f7f7;
+  font-weight: 700;
+}
+.about .left-side img {
+  border-radius: 50%;
+}
+.about .left-side span {
+  color: #bfbcb2;
+  line-height: 26px;
+  font-size: 1.4rem;
+}
+.about .right-side {
+  width: 770px;
+  height: 188px;
+  position: relative;
+}
+.about .right-side img {
+  position: absolute;
+  top: -20px;
+  left: -28px;
+}
+.about .right-side p {
+  color: var(--white-color);
+  line-height: 40px;
+  font-size: 2.6rem;
+  font-style: italic;
+}
+/* sign up section */
+.sign-up {
+  margin-top: 31px;
+}
+.sign-up .main-content{
+  display: flex;
+}
+
+.sign-up .sign-up-img{
+  width: 570px;
+  height: 438px;
+  display: flex;
+  margin-right: 130px;
+  gap: 30px;
+  
+}
+.sign-up .main-content img{
+ width: 270px;
+ height: 405px;
+ border-radius: 16px;
+}
+.sign-up .sign-up-img > img:first-child {
+  margin-top: 30px;
+}
+
+.sign-up .content{
+  margin-top: 51px;
+}
+
+.sign-up .content h1{
+  line-height: 48px;
+  font-weight: 600;
+  font-size: 3.4rem;
+  font-family: var(--font-body);
+  color: var(--primary-text-color);
+
+}
+.sign-up .content p , span {
+  display: block;
+  line-height: 28px;
+  font-size: 16px;
+  color: var(--second-text-color);
+}
+
+.sign-up .content .btn-sign-up{
+  background-color: var(--btn-color);
+  display: block;
+  width: 137px;
+  height: 50px;
 }
