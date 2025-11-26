@@ -21,12 +21,19 @@ body {
 }
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+.main-content .active {
+  background-color: var(--btn-color);
+}
+button {
+  cursor: pointer;
 }
 
 li {
   list-style: none;
 }
-/* HEADER Section */
+/******************************************* HEADER Section *******************************************/
 .header {
   background-color: var(--background-color);
   padding: 44px 0;
@@ -45,8 +52,8 @@ li {
   line-height: 30px;
   color: var(--second-text-color);
   font-weight: 400;
-  margin-top: 28px;
-  margin-bottom: 38px;
+  /* margin-top: 28px;
+  margin-bottom: 38px; */
 }
 .btn {
   width: 144px;
@@ -59,8 +66,6 @@ li {
 .header .body {
   display: flex;
   align-items: center;
-
-  /* can giua theo truc doc */
 }
 
 .header nav {
@@ -74,19 +79,19 @@ li {
   padding: 0 21px;
 }
 
-/* re chuot */
+/******************************************* re chuot *******************************************/
 .header nav a:hover {
   color: var(--primary-text-color);
   text-shadow: 1px 0 0 currentColor;
 }
 
-.header nav a.active {
+.header nav a.header-active {
   font-weight: 600;
   color: var(--primary-text-color);
   position: relative;
 }
 
-.header nav a.active::after {
+.header nav a.header-active::after {
   content: "";
   width: 12px;
   height: 2px;
@@ -102,7 +107,7 @@ li {
   margin-left: 49px;
 }
 
-/* Hero section */
+/******************************************* Hero section *******************************************/
 .hero {
   background-color: var(--background-color);
 }
@@ -180,15 +185,11 @@ li {
   line-height: 68px;
   width: 488px;
 }
-/* 
+
 .hero .right-box .decs {
-  font-size: 1.8rem;
-  line-height: 30px;
-  color: var(--second-text-color);
-  font-weight: 400;
   margin-top: 28px;
   margin-bottom: 38px;
-} */
+}
 .hero .right-box .call-to-action {
   display: flex;
   margin-bottom: 48px;
@@ -238,17 +239,22 @@ li {
   font-family: var(--font-body);
   line-height: 54px;
 }
-/* Courses products */
+/******************************************* Courses products *******************************************/
 .courses-products {
   margin-top: 153px;
   margin-bottom: 200px;
 }
-
+.courses-products .product-header > div:first-child {
+  width: 458px;
+}
 .courses-products .product-header h1 {
   line-height: 48px;
   color: var(--primary-text-color);
   font-size: 3.8rem;
   font-family: var(--font-body);
+  letter-spacing: -2px;
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .courses-products .call-to-action {
@@ -259,8 +265,9 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
+      margin-bottom: 55px;
 }
-.courses-products .call-to-action .prev-btn {
+.courses-products .call-to-action .next-prev-btn {
   width: 40px;
   height: 40px;
   background-color: var(--white-color);
@@ -271,18 +278,11 @@ li {
   border: 1px solid;
   color: var(--btn-color);
 }
-
-.courses-products .call-to-action .next-btn {
-  width: 40px;
-  height: 40px;
-  background-color: var(--white-color);
-  border-radius: 50%;
-  font-size: 3.2rem;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid;
-  background-color: #ffb900;
-  color: #fff;
+.courses-products .call-to-action .next-prev-btn img {
+  padding-bottom: 5px;
+}
+.courses-products .call-to-action .next-prev-btn:last-child {
+  background-color: var(--btn-color);
 }
 
 .courses-products .product-list {
@@ -294,6 +294,7 @@ li {
   height: 466px;
   border-radius: 12px;
   border: 1px solid #e2dfda;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
 }
 .courses-products .card-body {
   padding: 16px 22px 22px 22px;
@@ -341,11 +342,7 @@ li {
   color: var(--primary-text-color);
 }
 
-.courses-products .price .book-btn.active {
-  background-color: var(--btn-color);
-}
-
-/* About */
+/******************************************* About *******************************************/
 .about {
   background-color: #2e2100;
   height: 380px;
@@ -368,6 +365,7 @@ li {
 }
 .about .left-side img {
   border-radius: 50%;
+  margin-bottom: 18px;
 }
 .about .left-side span {
   color: #bfbcb2;
@@ -390,53 +388,253 @@ li {
   font-size: 2.6rem;
   font-style: italic;
 }
-/* sign up section */
-.sign-up {
+/***************************** sign up section********************* */
+.signup-section {
   margin-top: 31px;
+  margin-bottom: 200px;
 }
-.sign-up .main-content{
+.signup-section .sign-up {
   display: flex;
 }
 
-.sign-up .sign-up-img{
+.signup-section .sign-up .sign-up-img {
   width: 570px;
   height: 438px;
   display: flex;
   margin-right: 130px;
   gap: 30px;
-  
 }
-.sign-up .main-content img{
- width: 270px;
- height: 405px;
- border-radius: 16px;
+.signup-section .sign-up img {
+  width: 270px;
+  height: 405px;
+  border-radius: 16px;
 }
-.sign-up .sign-up-img > img:first-child {
+.signup-section .sign-up .sign-up-img > img:first-child {
   margin-top: 30px;
 }
 
-.sign-up .content{
+.signup-section .sign-up .content {
   margin-top: 51px;
 }
 
-.sign-up .content h1{
+.signup-section .sign-up .content h1 {
   line-height: 48px;
   font-weight: 600;
   font-size: 3.4rem;
   font-family: var(--font-body);
   color: var(--primary-text-color);
-
 }
-.sign-up .content p , span {
+.sign-up .content p {
+  margin-top: 16px;
   display: block;
   line-height: 28px;
   font-size: 16px;
   color: var(--second-text-color);
 }
 
-.sign-up .content .btn-sign-up{
+.sign-up .content .btn-sign-up {
+  margin-top: 32px;
   background-color: var(--btn-color);
   display: block;
   width: 137px;
   height: 50px;
+}
+.sign-up:nth-child(2) .content {
+  width: 570px;
+  margin-right: 130px;
+}
+.sign-up:nth-child(2) > img {
+  width: 470px;
+  height: 440px;
+}
+.signup-section .sign-up:nth-child(2) {
+  margin-top: 130px;
+}
+
+/****************************************** Blog section *******************************************/
+
+.blog {
+  padding-top: 96px;
+  padding-bottom: 140px;
+  background-color: #fffcf4;
+}
+
+.blog .heading {
+  text-align: center;
+  width: 448px;
+  height: 120px;
+  margin: 0 auto;
+  margin-bottom: 55px;
+}
+.blog .heading h1 {
+  line-height: 48px;
+  font-size: 3.8rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: #130606;
+  letter-spacing: -2px;
+}
+.blog .heading p {
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 28px;
+  color: #696262;
+}
+
+.blog .read-more-list {
+  display: flex;
+  gap: 30px;
+}
+.blog .read-more-info {
+  padding: 20px;
+}
+.blog .read-more-list .read-more-card {
+  border-radius: 16px;
+  background-color: #fff;
+  width: 370px;
+  height: 467px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+.blog .read-more-info .date {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 12px;
+}
+.blog .read-more-info .date::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 160px;
+  height: 1px;
+  background-color: #e2dfda;
+}
+.blog .read-more-info .date img {
+  width: 6px;
+  height: 6px;
+  margin-right: 4px;
+  margin-top: 1px;
+}
+.blog .read-more-info .date span {
+  font-size: 1.4rem;
+}
+
+.blog .read-more-info p {
+  margin-bottom: 12px;
+  line-height: 28px;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 28px;
+  color: var(--primary-text-color);
+}
+.blog .read-more-info .read-more-btn {
+  display: block;
+  width: 118px;
+  line-height: 50px;
+}
+
+/********************************************* Fotter ******************************************** */
+
+.footer {
+  background-color: #2e2100;
+}
+.footer .main-content {
+  padding-top: 105px;
+  padding-bottom: 73px;
+}
+.footer .footer-info {
+  display: flex;
+  padding-bottom: 38px;
+  position: relative;
+}
+.footer .footer-info::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 1px;
+  width: 100%;
+  background-color: #59554b;
+}
+.footer .footer-info h3 {
+  color: var(--white-color);
+}
+
+.footer .footer-info .lesson {
+  width: 267px;
+  height: 163px;
+  margin-right: 145px;
+}
+
+.footer .lesson .heading {
+  display: flex;
+}
+.footer .lesson .heading h3 {
+  font-family: var(--font-body);
+  font-size: 2.4rem;
+  line-height: 34px;
+  font-weight: 600;
+}
+.footer .lesson p {
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  line-height: 26px;
+  margin: 18px 0px;
+}
+.footer .lesson .heading img {
+  margin-top: 12px;
+  margin-left: 2px;
+}
+.footer .lesson .footer-logo {
+  display: flex;
+  gap: 18px;
+}
+.footer .footer-menu {
+  display: flex;
+  gap: 130px;
+}
+.footer .footer-menu .footer-container {
+  width: 130px;
+  height: 211px;
+}
+
+.footer .footer-menu .footer-container h3 {
+  position: relative;
+  margin-bottom: 43px;
+}
+.footer .footer-menu .footer-container h3:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -13px;
+  width: 130px;
+  height: 1px;
+  background-color: #59554b;
+}
+.footer .footer-container span {
+  color: #bfbcb2;
+  line-height: 26px;
+  font-size: 1.3rem;
+}
+
+.footer .footer-container:last-child {
+  width: 231px;
+}
+
+.footer .footer-container strong {
+  color: #fff;
+  font-weight: 600;
+  line-height: 26px;
+}
+.footer .footer-menu .footer-container span {
+  margin-top: 12px;
+      display: block;
+}
+
+.footer .footer-bottom {
+  color: #807d74;
+  line-height: 26px;
+  text-align: center;
+  margin-top: 28px;
 }
